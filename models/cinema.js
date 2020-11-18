@@ -16,10 +16,16 @@ Cinema.prototype.findFilmByName = function(title) {
 
 Cinema.prototype.findByGenre = function (genre) {
   const list = this.films.filter((film) => {
-    return film.genre === genre
-  })
+    return film.genre === genre;
+  });
   return list;
 }
 
+Cinema.prototype.findByYear = function (year) {
+  const year_list = this.films.filter((film) => {
+    return film.year === year;
+  });
+  return year_list;
+}
 
 module.exports = Cinema;
