@@ -26,12 +26,13 @@ Cinema.prototype.findByYear = function (year) {
     return film.year === year;
   });
   return year_list;
-  // year_list = year_list;
-  // if (year_list == []) {
-  //   return true;
-  // } else {
-  //   return false;
-  // }
+}
+
+Cinema.prototype.filmsOverLength = function (length) {
+  const film_length = this.films.every((film) => {
+    return film.length > length;
+  });
+  return film_length;
 }
 
 module.exports = Cinema;
