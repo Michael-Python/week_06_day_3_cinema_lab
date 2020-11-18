@@ -22,10 +22,16 @@ Cinema.prototype.findByGenre = function (genre) {
 }
 
 Cinema.prototype.findByYear = function (year) {
-  const year_list = this.films.filter((film) => {
+  const year_list = this.films.some((film) => {
     return film.year === year;
   });
   return year_list;
+  // year_list = year_list;
+  // if (year_list == []) {
+  //   return true;
+  // } else {
+  //   return false;
+  // }
 }
 
 module.exports = Cinema;
